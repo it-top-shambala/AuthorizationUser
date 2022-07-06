@@ -12,7 +12,7 @@ public static class UserConfig
         JsonSerializer.Serialize(file, user);
     }
 
-    public static User? ImportFromFile()
+    public static User ImportFromFile()
     {
         using var file = new FileStream(Path, FileMode.Open, FileAccess.Read);
         return JsonSerializer.Deserialize<User>(file);
