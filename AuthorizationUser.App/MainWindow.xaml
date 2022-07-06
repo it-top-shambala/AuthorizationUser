@@ -4,6 +4,27 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid />
+        Title="Авторизация" Height="450" Width="300"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+
+    <Window.Resources>
+
+    </Window.Resources>
+
+    <StackPanel DataContext="{Binding User}">
+        <TextBlock Text="Авторизация пользователя"/>
+
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Логин"/>
+            <TextBox Text="{Binding Login}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label Content="Пароль"/>
+            <TextBox Text="{Binding Password}"/>
+        </StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Button Content="Очистить"/>
+            <Button Content="Войти"/>
+        </StackPanel>
+    </StackPanel>
 </Window>
