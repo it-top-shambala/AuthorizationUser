@@ -2,6 +2,8 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationUser.App", "AuthorizationUser.App\AuthorizationUser.App.csproj", "{D148197F-681C-48AE-B431-9C6DC2849C71}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuthorizationUser.Model", "AuthorizationUser.Model\AuthorizationUser.Model.csproj", "{A3CCD53F-5076-428D-9D62-7DC008EC1114}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +14,9 @@ Global
 		{D148197F-681C-48AE-B431-9C6DC2849C71}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D148197F-681C-48AE-B431-9C6DC2849C71}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D148197F-681C-48AE-B431-9C6DC2849C71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A3CCD53F-5076-428D-9D62-7DC008EC1114}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A3CCD53F-5076-428D-9D62-7DC008EC1114}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A3CCD53F-5076-428D-9D62-7DC008EC1114}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A3CCD53F-5076-428D-9D62-7DC008EC1114}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
