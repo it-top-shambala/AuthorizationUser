@@ -13,6 +13,12 @@ public partial class MainWindow : Window
         _list = GetUsersFromJson.GetListOfLoginAndPassword();
 
         InitializeComponent();
+        
+        this.Closing += (sender, args) =>
+        {
+            var res = MessageBox.Show("Вы уверены?", "Авторизация", MessageBoxButton.YesNo, MessageBoxImage.Question);
+            args.Cancel = res == MessageBoxResult.No;
+        };
     }
 
     private void ButtonClear_OnClick(object sender, RoutedEventArgs e)
