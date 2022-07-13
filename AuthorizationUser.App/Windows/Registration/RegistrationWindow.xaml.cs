@@ -3,7 +3,7 @@ using AuthorizationUser.App.Windows.Main;
 
 namespace AuthorizationUser.App.Windows.Registration;
 
-public partial class RegistrationWindow : Window
+public partial class RegistrationWindow
 {
     public RegistrationWindow()
     {
@@ -16,4 +16,3 @@ public partial class RegistrationWindow : Window
         Close();
     }
 }
-

@@ -4,7 +4,7 @@ using AuthorizationUser.Model;
 
 namespace AuthorizationUser.App.Windows.Main;
 
-public partial class MainWindow : Window
+public partial class MainWindow
 {
     private readonly ListOfLoginAndPassword _list;
 
@@ -13,8 +13,8 @@ public partial class MainWindow : Window
         _list = GetUsersFromJson.GetListOfLoginAndPassword();
 
         InitializeComponent();
-        
-        this.Closing += (sender, args) =>
+
+        Closing += (_, args) =>
         {
             var res = MessageBox.Show("Вы уверены?", "Авторизация", MessageBoxButton.YesNo, MessageBoxImage.Question);
             args.Cancel = res == MessageBoxResult.No;
@@ -42,13 +42,13 @@ public partial class MainWindow : Window
             }
             else
             {
-                MessageBox.Show("Неверно ввели данные!", "Авторизация", MessageBoxButton.OK, 
+                MessageBox.Show("Неверно ввели данные!", "Авторизация", MessageBoxButton.OK,
                     MessageBoxImage.Error);
             }
         }
         else
         {
-            MessageBox.Show("Неверно ввели данные!", "Авторизация", MessageBoxButton.OK, 
+            MessageBox.Show("Неверно ввели данные!", "Авторизация", MessageBoxButton.OK,
                 MessageBoxImage.Error);
         }
 
@@ -63,9 +63,8 @@ public partial class MainWindow : Window
 
     private void HyperlinkRegistration_OnClick(object sender, RoutedEventArgs e)
     {
-        var registrationWindow = new RegistrationWindow();
-        registrationWindow.Show();
-        
-        this.Close();
+        new RegistrationWindow().Show();
+
+        Close();
     }
 }
