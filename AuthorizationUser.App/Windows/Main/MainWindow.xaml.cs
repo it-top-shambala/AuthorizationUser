@@ -3,6 +3,7 @@ using System.Windows.Controls;
 using AuthorizationUser.Model;
 
 namespace AuthorizationUser.App.Windows.Main;
+
 public partial class MainWindow : Window
 {
     private User _user;
@@ -10,7 +11,7 @@ public partial class MainWindow : Window
     public MainWindow()
     {
         _user = new User();
-        
+
         InitializeComponent();
     }
 
@@ -21,7 +22,6 @@ public partial class MainWindow : Window
 
     private void ButtonLogIn_OnClick(object sender, RoutedEventArgs e)
     {
-        
         ClearAll();
     }
 

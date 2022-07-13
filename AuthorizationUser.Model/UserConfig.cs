@@ -5,7 +5,7 @@ namespace AuthorizationUser.Model;
 public static class UserConfig
 {
     public static string Path = "user.json";
-    
+
     public static void ExportToFile(User user)
     {
         using var file = new FileStream(Path, FileMode.OpenOrCreate, FileAccess.Write);

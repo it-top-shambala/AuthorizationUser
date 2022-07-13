@@ -7,38 +7,38 @@
         Title="Авторизация" Height="450" Width="300">
 
     <Window.Resources>
-        <ResourceDictionary Source="MainWindowStyle.xaml"/>
+        <ResourceDictionary Source="MainWindowStyle.xaml" />
     </Window.Resources>
 
     <StackPanel>
         <TextBlock Text="Авторизация пользователя"
-                   Style="{StaticResource StyleHeader}"/>
+                   Style="{StaticResource StyleHeader}" />
 
         <StackPanel Style="{StaticResource StyleStackPanelLeft}">
             <Label x:Name="LabelInputLogin"
                    Content="Логин"
-                   Style="{StaticResource StyleLabel}"/>
+                   Style="{StaticResource StyleLabel}" />
             <TextBox x:Name="InputLogin"
-                     Style="{StaticResource StyleInputLogin}"/>
+                     Style="{StaticResource StyleInputLogin}" />
         </StackPanel>
 
         <StackPanel Style="{StaticResource StyleStackPanelLeft}">
             <Label x:Name="LabelInputPassword"
                    Content="Пароль"
-                   Style="{StaticResource StyleLabel}"/>
+                   Style="{StaticResource StyleLabel}" />
             <PasswordBox x:Name="InputPassword"
-                         Style="{StaticResource StyleInputPassword}"/>
+                         Style="{StaticResource StyleInputPassword}" />
         </StackPanel>
 
         <StackPanel Style="{StaticResource StyleStackPanelCenter}">
             <Button x:Name="ButtonClear"
                     Content="Очистить"
                     Style="{StaticResource StyleButtonClear}"
-                    Click="ButtonClear_OnClick"/>
+                    Click="ButtonClear_OnClick" />
             <Button x:Name="ButtonLogIn"
                     Content="Войти"
                     Style="{StaticResource StyleButtonLogIn}"
-                    Click="ButtonLogIn_OnClick"/>
+                    Click="ButtonLogIn_OnClick" />
         </StackPanel>
     </StackPanel>
 </Window>
