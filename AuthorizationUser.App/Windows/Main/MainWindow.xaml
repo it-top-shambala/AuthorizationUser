@@ -15,22 +15,30 @@
                    Style="{StaticResource StyleHeader}"/>
 
         <StackPanel Style="{StaticResource StyleStackPanelLeft}">
-            <Label Content="Логин"
+            <Label x:Name="LabelInputLogin"
+                   Content="Логин"
                    Style="{StaticResource StyleLabel}"/>
-            <TextBox Style="{StaticResource StyleInputLogin}"/>
+            <TextBox x:Name="InputLogin"
+                     Style="{StaticResource StyleInputLogin}"/>
         </StackPanel>
 
         <StackPanel Style="{StaticResource StyleStackPanelLeft}">
-            <Label Content="Пароль"
+            <Label x:Name="LabelInputPassword"
+                   Content="Пароль"
                    Style="{StaticResource StyleLabel}"/>
-            <PasswordBox Style="{StaticResource StyleInputPassword}"/>
+            <PasswordBox x:Name="InputPassword"
+                         Style="{StaticResource StyleInputPassword}"/>
         </StackPanel>
 
         <StackPanel Style="{StaticResource StyleStackPanelCenter}">
-            <Button Content="Очистить"
-                    Style="{StaticResource StyleButtonClear}"/>
-            <Button Content="Войти"
-                    Style="{StaticResource StyleButtonLogIn}"/>
+            <Button x:Name="ButtonClear"
+                    Content="Очистить"
+                    Style="{StaticResource StyleButtonClear}"
+                    Click="ButtonClear_OnClick"/>
+            <Button x:Name="ButtonLogIn"
+                    Content="Войти"
+                    Style="{StaticResource StyleButtonLogIn}"
+                    Click="ButtonLogIn_OnClick"/>
         </StackPanel>
     </StackPanel>
 </Window>
