@@ -4,22 +4,20 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="Авторизация" Height="450" Width="300"
-        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+        Title="Авторизация" Height="450" Width="300">
 
     <Window.Resources>
         <ResourceDictionary Source="MainWindowStyle.xaml"/>
     </Window.Resources>
 
-    <StackPanel DataContext="{Binding User}">
+    <StackPanel>
         <TextBlock Text="Авторизация пользователя"
                    Style="{StaticResource StyleHeader}"/>
 
         <StackPanel Style="{StaticResource StyleStackPanelLeft}">
             <Label Content="Логин"
                    Style="{StaticResource StyleLabel}"/>
-            <TextBox Text="{Binding Login}"
-                     Style="{StaticResource StyleInputLogin}"/>
+            <TextBox Style="{StaticResource StyleInputLogin}"/>
         </StackPanel>
 
         <StackPanel Style="{StaticResource StyleStackPanelLeft}">
