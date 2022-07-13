@@ -4,7 +4,7 @@ using System.Windows;
 using AuthorizationUser.App.Annotations;
 using AuthorizationUser.Model;
 
-namespace AuthorizationUser.App;
+namespace AuthorizationUser.App.Windows.Main;
 public partial class MainWindow : Window, INotifyPropertyChanged
 {
     private User _user;
@@ -20,7 +20,7 @@ public partial class MainWindow : Window, INotifyPropertyChanged
     
     public MainWindow()
     {
-        User = UserConfig.ImportFromFile();
+        User = new User();
         
         InitializeComponent();
     }
