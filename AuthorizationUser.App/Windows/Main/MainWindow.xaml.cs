@@ -1,16 +1,16 @@
 ﻿using System.Windows;
-using System.Windows.Controls;
+using AuthorizationUser.App.Windows.Registration;
 using AuthorizationUser.Model;
 
 namespace AuthorizationUser.App.Windows.Main;
 
 public partial class MainWindow : Window
 {
-    private User _user;
+    private readonly ListOfLoginAndPassword _list;
 
     public MainWindow()
     {
-        _user = new User();
+        _list = GetUsersFromJson.GetListOfLoginAndPassword();
 
         InitializeComponent();
     }
@@ -22,6 +22,30 @@ public partial class MainWindow : Window
 
     private void ButtonLogIn_OnClick(object sender, RoutedEventArgs e)
     {
+        var login = InputLogin.Text;
+        var password = InputPassword.Password;
+
+        var checkLogin = _list.CheckLogin(login);
+        if (checkLogin)
+        {
+            var checkPassword = _list.CheckPassword(login, password);
+            if (checkPassword)
+            {
+                MessageBox.Show("Вы успешно авторизовались!", "Авторизация", MessageBoxButton.OK,
+                    MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Неверно ввели данные!", "Авторизация", MessageBoxButton.OK, 
+                    MessageBoxImage.Error);
+            }
+        }
+        else
+        {
+            MessageBox.Show("Неверно ввели данные!", "Авторизация", MessageBoxButton.OK, 
+                MessageBoxImage.Error);
+        }
+
         ClearAll();
     }
 
@@ -29,5 +53,13 @@ public partial class MainWindow : Window
     {
         InputLogin.Clear();
         InputPassword.Clear();
+    }
+
+    private void HyperlinkRegistration_OnClick(object sender, RoutedEventArgs e)
+    {
+        var registrationWindow = new RegistrationWindow();
+        registrationWindow.Show();
+        
+        this.Close();
     }
 }

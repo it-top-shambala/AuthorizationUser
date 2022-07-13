@@ -1,0 +1,85 @@
+﻿<Window x:Class="AuthorizationUser.App.Windows.Registration.RegistrationWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:local="clr-namespace:AuthorizationUser.App.Windows.Registration"
+        mc:Ignorable="d"
+        Title="Регистрация" Height="550" Width="350">
+
+    <Window.Resources>
+        <ResourceDictionary Source="RegistrationWindowStyle.xaml" />
+    </Window.Resources>
+
+    <StackPanel>
+        <TextBlock Text="Регистрация пользователя"
+                   Style="{StaticResource StyleHeader}" />
+
+        <StackPanel Style="{StaticResource StyleStackPanelLeft}">
+            <Label x:Name="LabelInputFirstName"
+                   Content="Имя"
+                   Style="{StaticResource StyleLabel}" />
+            <TextBox x:Name="InputFirstName"
+                     Style="{StaticResource StyleInputLogin}" />
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource StyleStackPanelLeft}">
+            <Label x:Name="LabelInputLastName"
+                   Content="Фамилия"
+                   Style="{StaticResource StyleLabel}" />
+            <TextBox x:Name="InputLastName"
+                     Style="{StaticResource StyleInputLogin}" />
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource StyleStackPanelLeft}">
+            <Label x:Name="LabelInputLogin"
+                   Content="Логин"
+                   Style="{StaticResource StyleLabel}" />
+            <TextBox x:Name="InputLogin"
+                     Style="{StaticResource StyleInputLogin}" />
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource StyleStackPanelLeft}">
+            <Label x:Name="LabelInputPassword"
+                   Content="Пароль"
+                   Style="{StaticResource StyleLabel}" />
+            <TextBox x:Name="InputPassword"
+                     Style="{StaticResource StyleInputLogin}" />
+        </StackPanel>
+        <StackPanel Style="{StaticResource StyleStackPanelLeft}">
+            <Label x:Name="LabelInputRepeatPassword"
+                   Content="Пароль"
+                   Style="{StaticResource StyleLabel}" />
+            <TextBox x:Name="InputRepeatPassword"
+                     Style="{StaticResource StyleInputLogin}" />
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource StyleStackPanelLeft}">
+            <Label x:Name="LabelInputEmail"
+                   Content="Email"
+                   Style="{StaticResource StyleLabel}" />
+            <TextBox x:Name="InputEmail"
+                     Style="{StaticResource StyleInputLogin}" />
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource StyleStackPanelCenter}">
+            <Button x:Name="ButtonClear"
+                    Content="Очистить"
+                    Style="{StaticResource StyleButtonClear}" />
+            <Button x:Name="ButtonLogIn"
+                    Content="Войти"
+                    Style="{StaticResource StyleButtonLogIn}" />
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource StyleStackPanelCenter}">
+            <Label Style="{StaticResource StyleDefault}">
+                <Hyperlink x:Name="HyperlinkAuthorization"
+                           Click="HyperlinkAuthorization_OnClick">Авторизация</Hyperlink>
+            </Label>
+            <Label Style="{StaticResource StyleDefault}">
+                <Hyperlink x:Name="HyperlinkRestorePassword">Забыл пароль</Hyperlink>
+            </Label>
+        </StackPanel>
+    </StackPanel>
+</Window>
+

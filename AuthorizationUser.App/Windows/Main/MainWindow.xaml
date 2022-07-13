@@ -40,5 +40,15 @@
                     Style="{StaticResource StyleButtonLogIn}"
                     Click="ButtonLogIn_OnClick" />
         </StackPanel>
+
+        <StackPanel Style="{StaticResource StyleStackPanelCenter}">
+            <Label Style="{StaticResource StyleDefault}">
+                <Hyperlink x:Name="HyperlinkRegistration"
+                           Click="HyperlinkRegistration_OnClick">Регистрация</Hyperlink>
+            </Label>
+            <Label Style="{StaticResource StyleDefault}">
+                <Hyperlink x:Name="HyperlinkRestorePassword">Забыл пароль</Hyperlink>
+            </Label>
+        </StackPanel>
     </StackPanel>
 </Window>
