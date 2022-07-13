@@ -1,0 +1,38 @@
+﻿<Window x:Class="AuthorizationUser.App.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Авторизация" Height="450" Width="300"
+        DataContext="{Binding RelativeSource={RelativeSource Self}}">
+
+    <Window.Resources>
+        <ResourceDictionary Source="MainWindowStyle.xaml"/>
+    </Window.Resources>
+
+    <StackPanel DataContext="{Binding User}">
+        <TextBlock Text="Авторизация пользователя"
+                   Style="{StaticResource StyleHeader}"/>
+
+        <StackPanel Style="{StaticResource StyleStackPanelLeft}">
+            <Label Content="Логин"
+                   Style="{StaticResource StyleLabel}"/>
+            <TextBox Text="{Binding Login}"
+                     Style="{StaticResource StyleInputLogin}"/>
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource StyleStackPanelLeft}">
+            <Label Content="Пароль"
+                   Style="{StaticResource StyleLabel}"/>
+            <PasswordBox Style="{StaticResource StyleInputPassword}"/>
+        </StackPanel>
+
+        <StackPanel Style="{StaticResource StyleStackPanelCenter}">
+            <Button Content="Очистить"
+                    Style="{StaticResource StyleButtonClear}"/>
+            <Button Content="Войти"
+                    Style="{StaticResource StyleButtonLogIn}"/>
+        </StackPanel>
+    </StackPanel>
+</Window>
